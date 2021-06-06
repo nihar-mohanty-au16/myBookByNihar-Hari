@@ -1,0 +1,45 @@
+<div class="container d-flex justify-content-center flex-column col-5">
+    <div class="row card my-3 mb-1 pt-3 p-2 d-flex flex-row">
+        <p class="fs-3">Upload Book</p>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label">Book Title</label>
+                <input type="text" class="form-control" placeholder="Birnikan's Travels" name="title">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Author Name</label>
+                <input type="text" class="form-control" placeholder="B A Raspustin" name="author">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Genre</label>
+                <input type="text" class="form-control" placeholder="Seperate Genres with commas" name="genre">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Description</label>
+                <textarea type="text" class="form-control" placeholder="Description about the book" name="description"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Price</label>
+                <div class="input-group">
+                    <button class="input-group-text" id="basic-addon2">Rs</button>
+                    <input type="text" class="form-control" placeholder="250" name="price">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Inventory</label>
+                <input type="number" class="form-control" placeholder="20" name="inventory">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">ISBN</label>
+                <input type="text" class="form-control" placeholder="ISBN" name="isbn">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Cover Photo</label>
+                <input type="file" class="form-control" placeholder="250" name="cover">
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary col-5" type="submit">Upload</button>
+            </div>
+        </form>
+    </div>
+</div>

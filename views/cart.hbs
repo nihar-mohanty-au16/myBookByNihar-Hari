@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="/css/cart.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<script src="/js/cart.js" defer></script>
+
+<div class="container d-flex justify-content-center flex-column col-8">
+    <div class="row card my-3 mb-1 pt-3 p-2 d-flex flex-row">
+        <p class="fs-3">Shopping Cart</p>
+        <div id="cart-card">
+            <div class="row table-header d-flex justify-content-center px-2 m-0 mb-3">
+                <div class="col-sm-8 gx-2">
+                    <span class="fs-6">Item</span>
+                </div>
+                <div class="col-sm-2 gx-2 text-end">
+                    <span class="fs-6">Quantity</span>
+                </div>
+                <div class="col-sm-2 gx-2 text-end">
+                    <span class="fs-6">Price</span>
+                </div>
+            </div>
+            {{#each data.books}}
+            <div class="row cart-items d-flex justify-content-center px-2 m-0 mb-3">
+                <div class="col-sm-8 gx-2 d-flex flex-row">
+                    <img src="{{this.cover}}" alt="" class="w-25">
+                    <span class="mx-2 fs-4">{{this.title}}</span>
+                </div>
+                <div class="col-sm-2 gx-2 text-end">
+                    <span class="fs-5">
+                        <form>
+                        <button formaction="/cart/remove" name="bookid" value="{{this._id}}" formmethod="post" class="btn btn-circle btn-outline-secondary"><i class="bi bi-dash-lg"></i></button>
+                        {{this.qty}}
+                        <button formaction="/cart/add" name="bookid" value="{{this._id}}" formmethod="post" class="btn btn-circle btn-outline-secondary"><i class="bi bi-plus-lg"></i></button>
+                        </form>
+                    </span>
+                </div>
+                <div class="col-sm-2 gx-2 text-end">
+                    <span class="fs-6">Rs.<span class="fs-5">{{this.price}}</span></span>
+                </div>
+            </div>
+            {{/each}}
+            <div class="row cart-total d-flex justify-content-center px-2 m-0 mb-3">
+                <div class="col-sm-8 gx-2 text-end">
+                    <span class="fs-5">Subtotal</span>
+                </div>
+                <div class="col-sm-2 gx-2 text-end">
+                    <span class="fs-5" id="items" value="{{data.items}}">{{data.items}}</span>
+                </div>
+                <div class="col-sm-2 gx-2 text-end">
+                    <span class="fs-6">Rs.<span class="fs-5">{{data.total}}</span></span>
+                </div>
+            </div>
+            <div class="row cart-buttons d-flex justify-content-center px-2 m-0 mb-3">
+                <div class="col-sm-6 gx-2">
+                    <a href="/cart/clear" class="btn btn-secondary">Clear Items</a>
+                </div>
+                <div class="col-sm-6 gx-2 text-end">
+                    <form>
+                        <button formaction="/" formmethod="get" class="btn btn-primary">Continue Shopping</button>
+                        <button name="amount" value="{{data.total}}" formaction="/checkout/cart" formmethod="post" class="btn btn-primary">Checkout</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="empty-cart-alert" class="d-flex justify-content-center px-4">
+            <div class="alert alert-warning w-100" role="alert">
+                Your cart is empty
+            </div>
+        </div>
+    </div>
+</div>

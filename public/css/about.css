@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+}
+
+#column1 {
+  float: left;
+  width: 50%;
+  height: 100vh;
+  background-image: url("https://images.wallpaperscraft.com/image/hologram_ball_core_150682_3840x2400.jpg");
+
+  
+}
+
+#column2 {
+  float: left;
+  width: 50%;
+  height: 100vh;
+  
+  background-image: url("https://images.wallpaperscraft.com/image/hologram_scheme_scifi_139294_3840x2400.jpg");
+}
+
+#portrait1 {
+  position: absolute;
+  margin-top: 60px;
+  background-image: url("https://res-console.cloudinary.com/drsa1ahip/thumbnails/v1/image/upload/v1622953731/SF9xa2h5Zms=/preview");
+  width: 200px;
+  height: 200px;
+  left: 25%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  background-position: top;
+  background-size: 100%;
+  border-radius: 100px;
+  box-shadow: 1px 1px 10px;
+}
+#portrait2 {
+  position: absolute;
+  margin-top: 60px;
+  background-image: url("https://res-console.cloudinary.com/drsa1ahip/thumbnails/v1/image/upload/v1622953731/Tl9vc2x4Yng=/preview");
+  width: 200px;
+  height: 200px;
+  left: 75%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  background-position: top;
+  background-size: 100%;
+  border-radius: 100px;
+  box-shadow: 1px 1px 10px;
+}
+
+.photohead {
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 45vh;
+}
+
+.photodescription {
+  font-family: verdana;
+  font-size: 16px;
+  text-align: justify;
+  color: white;
+  padding: 30px;
+}

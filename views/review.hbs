@@ -1,0 +1,30 @@
+<div class="container d-flex justify-content-center flex-column col-5">
+    <div class="row card my-3 mb-1 pt-3 p-2 d-flex flex-row">
+        <p class="fs-3">Leave Review for Book</p>
+        <form action="/review" method="post">
+            <div class="mb-3">
+                <label class="form-label">Review Title</label>
+                <input type="text" class="form-control" placeholder="A Masterpiece" name="reviewTitle">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Review</label>
+                <textarea type="text" class="form-control" placeholder="Review of Book" rows="7" name="review"></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Rating</label>
+                <select class="form-select" name="rating">
+                    <option selected>No Rating</option>
+                    <option value="1">1 / 5</option>
+                    <option value="2">2 / 5</option>
+                    <option value="3">3 / 5</option>
+                    <option value="4">4 / 5</option>
+                    <option value="5">5 / 5</option>
+                </select>
+            </div>
+            <input type="text" class="d-none" name="bookid" value={{bookid}}></input>
+            <div class="text-center">
+                <button class="btn btn-primary col-5" type="submit">Submit Review</button>
+            </div>
+        </form>
+    </div>
+</div>

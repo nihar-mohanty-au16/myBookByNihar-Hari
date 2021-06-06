@@ -1,0 +1,16 @@
+.navbar {
+    font-size: 15px;
+    font-weight: 500;
+    background-color: rgb(219, 219, 219) !important;
+}
+
+.search-nav {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.badge {
+    margin-left: -6px ;
+    border-radius: 50%;
+}

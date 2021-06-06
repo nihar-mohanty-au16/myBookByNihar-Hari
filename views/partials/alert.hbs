@@ -1,0 +1,8 @@
+{{#if alert}}
+    <div class="d-flex justify-content-center mt-1 py-0" id="alert">
+        <div class="alert alert-danger alert-dismissible py-0 d-flex align-items-center justify-content-between px-4 col-3">
+            <span>{{alert}}</span>
+            <span onclick="removeAlert();" style="cursor: pointer;" class="fs-3 m-0 p-0  close text-decoration-none float-left text-danger" aria-label="close">&times;</span>
+        </div>
+    </div>
+{{/if}}
